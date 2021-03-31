@@ -1,0 +1,40 @@
+<ng-container>
+    <mat-toolbar class="example-header">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Dashboard Buku</span>
+      <div class="uk-width-expand"></div>
+      <small>Admin</small>
+      <button mat-button (click)="logout()">Keluar</button>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="admin-container">
+      <mat-sidenav class="admin-side"
+      #sidenav
+      mode="side"
+      [position]="'start'"
+      opened
+      class="sidenav-left"
+      [fixedInViewport]="true"
+      [fixedTopGap]="64"
+      [fixedBottomGap]="0">
+
+        <mat-nav-list>
+          <mat-list-item routerLink="/admin/dashboard">
+            <mat-icon matListIcon>dashboard</mat-icon>
+            <span matLine>Dashboard</span>
+          </mat-list-item>
+          <mat-list-item routerLink="/admin/product">
+            <mat-icon matListIcon>library_books</mat-icon>
+            <span matLine>Produk</span>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content class="coba1">
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+
+    </mat-sidenav-container>
+</ng-container>

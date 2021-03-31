@@ -1,0 +1,35 @@
+<div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport">
+    <mat-card class="uk-width-1-3@m uk-width-1-2@s">
+        <div class="uk-flex uk-flex-center uk-margin-medium">
+            <span class="title-content">Registrasi Akun</span>
+        </div>
+      <mat-card-content>
+        <!-- <mat-form-field class="uk-width-1-1">
+            <mat-label>Nama</mat-label>
+            <input matInput placeholder="Masukkan nama Anda.">
+        </mat-form-field> -->
+        <mat-form-field class="uk-width-1-1">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Masukkan email Anda" [(ngModel)]="user.email" required>
+        </mat-form-field>
+        <mat-form-field class="uk-width-1-1">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Masukkan password Anda" [(ngModel)]="user.password" required>
+        </mat-form-field>
+        <!-- <mat-form-field class="uk-width-1-1">
+            <mat-label>Ketik ulang password</mat-label>
+            <input matInput placeholder="Masukkan email Anda">
+        </mat-form-field> -->
+  
+        <div class="uk-flex uk-flex-right">
+          <div class="uk-width-expand">
+            <button mat-button routerLink= "/login">Sudah punya Akun?</button>
+            <button mat-button routerLink= "/forgot">Lupa Password</button>
+          </div>
+          <div>
+            <button mat-raised-button color="primary" (click)="register()" [disabled]="loading">{{loading ? 'Mendaftarkan..' : 'Daftar'}}</button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+</div>
