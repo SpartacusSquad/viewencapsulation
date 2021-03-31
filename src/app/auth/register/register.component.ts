@@ -17,7 +17,6 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
 
   user:any={};
 
